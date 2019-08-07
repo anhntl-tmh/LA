@@ -1,0 +1,6 @@
+framework module Pods_LA {
+  umbrella header "Pods-LA-umbrella.h"
+
+  export *
+  module * { export * }
+}

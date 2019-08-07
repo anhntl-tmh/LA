@@ -1,0 +1,10 @@
+{
+  "commitish" : "5.0",
+  "iOS" : [
+    {
+      "name" : "Koloda",
+      "hash" : "7079da936460801cea5e21394b9b8d48705a1b1bf0364275558cfe2e23a78165",
+      "swiftToolchainVersion" : "5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
+    }
+  ]
+}
