@@ -19,30 +19,32 @@ class ViewController: UIViewController {
     @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var name: UILabel!
     
-    @IBOutlet weak var friendAvatar: UIImageView!
-    @IBOutlet weak var friendCard: UIView!
-    @IBOutlet weak var friendName: UILabel!
-    @IBOutlet weak var labelText: UILabel!
-    fileprivate var dataSource: [[String: String]] = [["name": "2", "avatar": "friendAvatar"]]
     
+    @IBOutlet weak var friendCard: UIView!
+    @IBOutlet weak var sendID: UILabel!
+    @IBOutlet weak var RecieveID: UILabel!
+    @IBOutlet weak var status: UILabel!
+    
+    fileprivate var dataSource: [[String: String]] = [["name": "2", "avatar": "friendAvatar"]]
+    let n = 777777
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         kolodaView.dataSource = self
         kolodaView.delegate = self
-        
+        self.sendID.text = "\(n)"
         self.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
-        self.friendCard.isHidden = true
-        self.labelText.isHidden = true
     }
  
     @IBAction func reloadData(_ sender: Any) {
+        
+        self.RecieveID.text = ""
+        self.status.text = ""
+        
         let position = kolodaView.currentCardIndex
         dataSource.append(["name": "2", "avatar": "friendAvatar"])
 
         kolodaView.insertCardAtIndexRange(position..<position + 1, animated: true)
-        self.friendCard.isHidden = true
-        self.labelText.isHidden = true
     }
 }
 
@@ -73,8 +75,23 @@ extension ViewController: KolodaViewDelegate {
         } else {
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             if let sdk = appDelegate.sdk {
-                let text : String = "2  "
-                if let data = text.data(using: .utf8) {
+                let date = Date()
+                var calendar = Calendar.current
+                calendar.timeZone = TimeZone(identifier: "UTC")!
+                let seconds = calendar.component(.second, from: date)
+
+                
+                
+                var st = String(format:"%02X", n)
+                if seconds < 10 {
+                    let tmp = "0" + String(seconds)
+                    st.append(String(tmp))
+                } else {
+                    st.append(String(seconds))
+                }
+
+                print("hexa of id \(st) and type of object is : \(type(of: st))")
+                if let data = st.data(using: .utf8) {
                     if let error = sdk.send(data) {
                         print(error.localizedDescription)
                         
@@ -99,7 +116,7 @@ extension ViewController: KolodaViewDataSource {
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
         print(dataSource[index]["avatar"]!)
         self.avatar.image = UIImage(named: dataSource[index]["avatar"]!)
-        self.name.text = "userID: " + dataSource[index]["name"]!
+        self.name.text = "Swipe to send card"
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
@@ -107,12 +124,16 @@ extension ViewController: KolodaViewDataSource {
             sdk.sendingBlock = {
                 (data : Data?, channel: UInt?) -> () in
                 print("sending Block")
+                self.status.text = "Sending Card"
+                self.status.textColor = .green
                 return;
             }
             
             sdk.sentBlock = {
                 (data : Data?, channel: UInt?) -> () in
                 print("send Block")
+                self.status.text = "Send Card"
+                self.status.textColor = .red
                 return;
             }
         }
@@ -120,36 +141,35 @@ extension ViewController: KolodaViewDataSource {
         if let sdk2 = appDelegate.sdk2 {
             DispatchQueue.global(qos: .userInitiated).async {
                 print("run in background")
-                let multiTask = DispatchGroup()
-                multiTask.enter()
+               
                 sdk2.receivingBlock = {
                     (channel: UInt?) -> () in
                     print("rêceving Block")
+                    self.status.text = "Recieving Card"
+                    self.status.textColor = .blue
                     return;
                 }
                 
                 sdk2.receivedBlock = {
                     (data : Data?, channel: UInt?) -> () in
                     print("rêcev Block")
+                    self.status.text = "Recieved Card"
+                    self.status.textColor = .red
                     if let data = data {
                         if let payload = String(data: data, encoding: .utf8) {
-                            self.friendCard.isHidden = false
-                            self.labelText.isHidden = false
+                            let start = String.Index.init(utf16Offset: 0, in: payload)
+                            let end = String.Index.init(utf16Offset: payload.count-2, in: payload)
+                            let substr : String
+                            substr = String(payload[start..<end])
                             
-                            if payload == "1" {
-                                self.friendAvatar.image = UIImage(named: "avatar")
-                            } else {
-                                self.friendAvatar.image = UIImage(named: "friendAvatar")
-                            }
+                            print("day so nhan duoc la \(substr)")
+
+                             let anh = Int(substr, radix: 16)!
+                      
+                             self.RecieveID.text = "\(anh)"
                             
-                            if payload == self.dataSource[index]["name"] {
-                                self.friendName.text = "It's you!!!!"
-                            } else {
-                                self.friendName.text = "FriendID: " + payload
-                            }
                             
 
-                            print(String(format: "Received: %@", payload))
                         } else {
                             print("Failed to decode payload!")
                         }
@@ -158,8 +178,7 @@ extension ViewController: KolodaViewDataSource {
                     }
                     return;
                 }
-                
-                multiTask.wait()
+
                 
             }
         }

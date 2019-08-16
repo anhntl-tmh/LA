@@ -14,10 +14,9 @@
 		1CA2D1A222F1347F001FE765 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CA2D1A122F1347F001FE765 /* Assets.xcassets */; };
 		1CA2D1A522F1347F001FE765 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CA2D1A322F1347F001FE765 /* LaunchScreen.storyboard */; };
 		1CA2D1B022F1347F001FE765 /* LATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA2D1AF22F1347F001FE765 /* LATests.swift */; };
-		1CA2D1BE22F138E5001FE765 /* Koloda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA2D1BB22F135E4001FE765 /* Koloda.framework */; };
-		1CA2D1C022F13E41001FE765 /* pop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA2D1BF22F13E41001FE765 /* pop.framework */; };
 		1CA2D1C922F184D1001FE765 /* CustomerKolodaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA2D1C822F184D1001FE765 /* CustomerKolodaView.swift */; };
-		6C671AEC3EF3FA59D9381896 /* Pods_LA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37E0635299346B7E196F4326 /* Pods_LA.framework */; };
+		BD729F602302C24C007E8E41 /* Koloda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA2D1BB22F135E4001FE765 /* Koloda.framework */; };
+		BD729F612302C26B007E8E41 /* pop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA2D1BF22F13E41001FE765 /* pop.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,9 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CA2D1C022F13E41001FE765 /* pop.framework in Frameworks */,
-				1CA2D1BE22F138E5001FE765 /* Koloda.framework in Frameworks */,
-				6C671AEC3EF3FA59D9381896 /* Pods_LA.framework in Frameworks */,
+				BD729F612302C26B007E8E41 /* pop.framework in Frameworks */,
+				BD729F602302C24C007E8E41 /* Koloda.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,7 +446,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8YNC8B6GFT;
+				DEVELOPMENT_TEAM = UT85388U7N;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -459,7 +457,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.LA1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.LA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -472,7 +470,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8YNC8B6GFT;
+				DEVELOPMENT_TEAM = UT85388U7N;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -483,7 +481,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.LA1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.LA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
