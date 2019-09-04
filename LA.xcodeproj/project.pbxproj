@@ -15,8 +15,20 @@
 		1CA2D1A522F1347F001FE765 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CA2D1A322F1347F001FE765 /* LaunchScreen.storyboard */; };
 		1CA2D1B022F1347F001FE765 /* LATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA2D1AF22F1347F001FE765 /* LATests.swift */; };
 		1CA2D1C922F184D1001FE765 /* CustomerKolodaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA2D1C822F184D1001FE765 /* CustomerKolodaView.swift */; };
+		BD2837ED230FA30A006E2ADF /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2837EC230FA30A006E2ADF /* SplashViewController.swift */; };
+		BD2837EF230FA6E1006E2ADF /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = BD2837EE230FA6E1006E2ADF /* loading.gif */; };
+		BD2837F3230FD1C8006E2ADF /* gif4.gif in Resources */ = {isa = PBXBuildFile; fileRef = BD2837F2230FD1C8006E2ADF /* gif4.gif */; };
+		BD31E312230E6CB200F747CE /* arrowUp.gif in Resources */ = {isa = PBXBuildFile; fileRef = BD31E311230E6CB200F747CE /* arrowUp.gif */; };
+		BD31E314230E6CDD00F747CE /* SendCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD31E313230E6CDD00F747CE /* SendCardViewController.swift */; };
+		BD31E316230E6EA200F747CE /* gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = BD31E315230E6EA200F747CE /* gif.gif */; };
+		BD31E31A230E822300F747CE /* gif2.gif in Resources */ = {isa = PBXBuildFile; fileRef = BD31E319230E822300F747CE /* gif2.gif */; };
+		BD31E31C230EC6C600F747CE /* ReceiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD31E31B230EC6C600F747CE /* ReceiveViewController.swift */; };
+		BD31E31E230EC92B00F747CE /* ExchangeCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD31E31D230EC92B00F747CE /* ExchangeCardViewController.swift */; };
 		BD729F602302C24C007E8E41 /* Koloda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA2D1BB22F135E4001FE765 /* Koloda.framework */; };
 		BD729F612302C26B007E8E41 /* pop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA2D1BF22F13E41001FE765 /* pop.framework */; };
+		BD8436B5230D190C003D0FDB /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8436B4230D190C003D0FDB /* Converter.swift */; };
+		BDFA52B7231F5D9D0016BD72 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFA52B6231F5D9D0016BD72 /* QRCodeViewController.swift */; };
+		BDFA52B9231FA0920016BD72 /* ScanQRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFA52B8231FA0920016BD72 /* ScanQRCodeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +59,18 @@
 		1CA2D1C822F184D1001FE765 /* CustomerKolodaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerKolodaView.swift; sourceTree = "<group>"; };
 		37E0635299346B7E196F4326 /* Pods_LA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64EB51FD1DAD20315756CCCB /* Pods-LA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LA.release.xcconfig"; path = "Target Support Files/Pods-LA/Pods-LA.release.xcconfig"; sourceTree = "<group>"; };
+		BD2837EC230FA30A006E2ADF /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		BD2837EE230FA6E1006E2ADF /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = loading.gif; path = ../../../Downloads/loading.gif; sourceTree = "<group>"; };
+		BD2837F2230FD1C8006E2ADF /* gif4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = gif4.gif; path = ../../../Downloads/gif4.gif; sourceTree = "<group>"; };
+		BD31E311230E6CB200F747CE /* arrowUp.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = arrowUp.gif; path = ../../../Downloads/arrowUp.gif; sourceTree = "<group>"; };
+		BD31E313230E6CDD00F747CE /* SendCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendCardViewController.swift; sourceTree = "<group>"; };
+		BD31E315230E6EA200F747CE /* gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = gif.gif; path = ../../../Downloads/gif.gif; sourceTree = "<group>"; };
+		BD31E319230E822300F747CE /* gif2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = gif2.gif; path = ../../../Downloads/gif2.gif; sourceTree = "<group>"; };
+		BD31E31B230EC6C600F747CE /* ReceiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveViewController.swift; sourceTree = "<group>"; };
+		BD31E31D230EC92B00F747CE /* ExchangeCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeCardViewController.swift; sourceTree = "<group>"; };
+		BD8436B4230D190C003D0FDB /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
+		BDFA52B6231F5D9D0016BD72 /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
+		BDFA52B8231FA0920016BD72 /* ScanQRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRCodeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +125,26 @@
 		1CA2D19922F1347A001FE765 /* LA */ = {
 			isa = PBXGroup;
 			children = (
-				1CA2D19A22F1347A001FE765 /* AppDelegate.swift */,
+				BD2837F2230FD1C8006E2ADF /* gif4.gif */,
+				BD2837EE230FA6E1006E2ADF /* loading.gif */,
+				BD31E311230E6CB200F747CE /* arrowUp.gif */,
+				BD31E319230E822300F747CE /* gif2.gif */,
+				BD31E315230E6EA200F747CE /* gif.gif */,
+				BD31E31D230EC92B00F747CE /* ExchangeCardViewController.swift */,
+				BD31E313230E6CDD00F747CE /* SendCardViewController.swift */,
+				BD31E31B230EC6C600F747CE /* ReceiveViewController.swift */,
+				BD2837EC230FA30A006E2ADF /* SplashViewController.swift */,
+				BDFA52B6231F5D9D0016BD72 /* QRCodeViewController.swift */,
+				BDFA52B8231FA0920016BD72 /* ScanQRCodeViewController.swift */,
 				1CA2D19C22F1347A001FE765 /* ViewController.swift */,
+				1CA2D19A22F1347A001FE765 /* AppDelegate.swift */,
 				1CA2D19E22F1347A001FE765 /* Main.storyboard */,
 				1CA2D1A122F1347F001FE765 /* Assets.xcassets */,
 				1CA2D1A322F1347F001FE765 /* LaunchScreen.storyboard */,
 				1CA2D1A622F1347F001FE765 /* Info.plist */,
 				1CA2D1C822F184D1001FE765 /* CustomerKolodaView.swift */,
 				1C063DE822F29FA4003195BC /* Credentials.swift */,
+				BD8436B4230D190C003D0FDB /* Converter.swift */,
 			);
 			path = LA;
 			sourceTree = "<group>";
@@ -218,6 +254,11 @@
 				1CA2D1A522F1347F001FE765 /* LaunchScreen.storyboard in Resources */,
 				1CA2D1A222F1347F001FE765 /* Assets.xcassets in Resources */,
 				1CA2D1A022F1347A001FE765 /* Main.storyboard in Resources */,
+				BD31E312230E6CB200F747CE /* arrowUp.gif in Resources */,
+				BD2837EF230FA6E1006E2ADF /* loading.gif in Resources */,
+				BD31E31A230E822300F747CE /* gif2.gif in Resources */,
+				BD2837F3230FD1C8006E2ADF /* gif4.gif in Resources */,
+				BD31E316230E6EA200F747CE /* gif.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +323,14 @@
 				1CA2D19D22F1347A001FE765 /* ViewController.swift in Sources */,
 				1CA2D19B22F1347A001FE765 /* AppDelegate.swift in Sources */,
 				1C063DE922F29FA4003195BC /* Credentials.swift in Sources */,
+				BD2837ED230FA30A006E2ADF /* SplashViewController.swift in Sources */,
+				BDFA52B7231F5D9D0016BD72 /* QRCodeViewController.swift in Sources */,
 				1CA2D1C922F184D1001FE765 /* CustomerKolodaView.swift in Sources */,
+				BDFA52B9231FA0920016BD72 /* ScanQRCodeViewController.swift in Sources */,
+				BD31E31C230EC6C600F747CE /* ReceiveViewController.swift in Sources */,
+				BD31E314230E6CDD00F747CE /* SendCardViewController.swift in Sources */,
+				BD31E31E230EC92B00F747CE /* ExchangeCardViewController.swift in Sources */,
+				BD8436B5230D190C003D0FDB /* Converter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

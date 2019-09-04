@@ -75,22 +75,25 @@ extension ViewController: KolodaViewDelegate {
         } else {
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             if let sdk = appDelegate.sdk {
-                let date = Date()
-                var calendar = Calendar.current
-                calendar.timeZone = TimeZone(identifier: "UTC")!
-                let seconds = calendar.component(.second, from: date)
+                //get second of current time
+//                let date = Date()
+//                var calendar = Calendar.current
+//                calendar.timeZone = TimeZone(identifier: "UTC")!
+//                let seconds = calendar.component(.second, from: date)
 
+            
+                //conver to hexa
+//                var st = String(format:"%02X", n)
+//                if seconds < 10 {
+//                    let tmp = "0" + String(seconds)
+//                    st.append(String(tmp))
+//                } else {
+//                    st.append(String(seconds))
+//                }
+//
+//                print("hexa of id \(st) and type of object is : \(type(of: st))")
                 
-                
-                var st = String(format:"%02X", n)
-                if seconds < 10 {
-                    let tmp = "0" + String(seconds)
-                    st.append(String(tmp))
-                } else {
-                    st.append(String(seconds))
-                }
-
-                print("hexa of id \(st) and type of object is : \(type(of: st))")
+                let st = Converter.encode(number: n)
                 if let data = st.data(using: .utf8) {
                     if let error = sdk.send(data) {
                         print(error.localizedDescription)
@@ -157,17 +160,22 @@ extension ViewController: KolodaViewDataSource {
                     self.status.textColor = .red
                     if let data = data {
                         if let payload = String(data: data, encoding: .utf8) {
-                            let start = String.Index.init(utf16Offset: 0, in: payload)
-                            let end = String.Index.init(utf16Offset: payload.count-2, in: payload)
-                            let substr : String
-                            substr = String(payload[start..<end])
+                            //decode hexa
+//                            let start = String.Index.init(utf16Offset: 0, in: payload)
+//                            let end = String.Index.init(utf16Offset: payload.count-2, in: payload)
+//                            let substr : String
+//                            substr = String(payload[start..<end])
+//
+                            print("day so nhan duoc la \(payload)")
+//
+//                             let anh = Int(substr, radix: 16)!
                             
-                            print("day so nhan duoc la \(substr)")
-
-                             let anh = Int(substr, radix: 16)!
+                            //decode using COnverter
+                            let anh = Converter.decode(encoded: payload)
                       
-                             self.RecieveID.text = "\(anh)"
+                            self.RecieveID.text = "\(String(describing: anh))"
                             
+                            print("id gui la \(String(describing: anh))")
                             
 
                         } else {
